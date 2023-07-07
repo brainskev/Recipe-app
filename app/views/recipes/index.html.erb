@@ -1,4 +1,4 @@
-<h1><%="Welcome #{current_user.name} to your Recipes"%></h1>
+<div class='top-bar'> <h1><%="Welcome #{current_user.name} to your Recipes"%></h1> </div>
 <%= render '/shared/navbar'%>
 <div class="container"style="width: 800px; margin-top: 20px;">
 <% @recipes.each do |recipe| %>
