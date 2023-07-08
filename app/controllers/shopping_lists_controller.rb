@@ -11,7 +11,7 @@ class ShoppingListsController < ApplicationController
         f = current_user.foods.find(food.id)
         flag = check_duplicate(@foods, f, q)
         if (f.quantity - q).negative? && flag
-          @foods << { name: f.name, quantity: f.quantity - q, price: f.price * (f.quantity - q) }
+          @foods << { name: f.name, quantity: f.quantity - q,unit: f.measurement_unit, price: f.price * (f.quantity - q) }
         end
       end
     end

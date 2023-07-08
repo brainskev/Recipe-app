@@ -26,7 +26,7 @@
         <% @foods.each do |f| %>
           <tr>
             <td><%= f[:name] %></td>
-            <td><%= f[:quantity] * -1 %></td>
+            <td><%= f[:quantity] * -1 %> <%= f[:unit]  %> </td>
             <td>$<%= f[:price] * -1 %></td>
           </tr>
         <% end %>
