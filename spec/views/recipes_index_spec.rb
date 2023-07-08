@@ -20,11 +20,11 @@ RSpec.describe 'Recipes', type: :feature do
     end
 
     it 'renders remove button' do
-      expect(page).to have_content('Delete')
+      expect(page).to have_content('Remove')
     end
 
     it 'redirects to delete path' do
-      click_button 'Delete'
+      click_button 'Remove'
       expect(page).to have_current_path(recipes_path)
     end
 
